@@ -20,8 +20,8 @@ function Keg(props){
         <h3>{props.name} - ${props.price}</h3>
         <div>Pints remaining: {props.pints}</div>
       </div>
-      {stockMessage}
       {servePintButton}
+      {stockMessage}
       <hr/>
     </React.Fragment>
   );
