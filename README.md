@@ -20,7 +20,7 @@ Weekly project for Epicodus. An app that allows a tap room to keep track of thei
 * As a user, I want this application to be nicely styled. (Use stylesheets and CSS objects!)
 
 ## Component Diagram
-[<img src="https://www.dropbox.com/s/ogmyqm8w7yrqghc/Tap%20Room%20App%20Diagram.png">](https://www.dropbox.com)
+![Diagram of React Components](./public/component_diagram.png)
 
 ## Setup/Installation Requirements
 
