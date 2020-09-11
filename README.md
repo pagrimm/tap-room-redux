@@ -34,9 +34,9 @@ Weekly project for Epicodus. An app that allows a tap room to keep track of thei
 
 HTML  
 CSS  
-React 16.13.1 
-React Bootstrap 1.3.0
-Bootstrap 4.5.2
+React 16.13.1  
+React Bootstrap 1.3.0  
+Bootstrap 4.5.2  
 
 ## Legal
 
