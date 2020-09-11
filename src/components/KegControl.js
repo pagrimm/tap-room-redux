@@ -21,7 +21,6 @@ class KegControl extends React.Component {
   // const myReturn = myStyle();
 
   handleEditClick = () => {
-    console.log("handleEditClick reached!");
     this.setState({editing: true});
   }
 
@@ -60,6 +59,19 @@ class KegControl extends React.Component {
     });
   }
 
+  handleServingPint = (id) => {
+    const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
+    if (selectedKeg.pints > 0){
+      const updatedKeg = {...selectedKeg, pints: selectedKeg.pints - 1}
+      const editedMasterKegList = this.state.masterKegList
+        .filter(keg => keg.id !== selectedKeg.id)
+        .concat(updatedKeg);
+      this.setState({
+        masterKegList: editedMasterKegList,
+      });
+    }
+  }
+
   handleEditingKegInList = (kegToEdit) => {
     const editedMasterKegList = this.state.masterKegList
       .filter(keg => keg.id !== this.state.selectedKeg.id)
@@ -91,7 +103,8 @@ class KegControl extends React.Component {
     } else {
         currentlyVisibleState = 
           <KegList 
-            kegList={this.state.masterKegList} 
+            kegList={this.state.masterKegList.sort((a, b) => (a.name > b.name) ? 1 : -1)} 
+            onServingPint={this.handleServingPint}
             onKegSelection={this.handleChangingSelectedKeg} />
         buttonText = "Add Keg"
     }
