@@ -1,7 +1,6 @@
-
 import React from "react";
 import Header from "./Header";
-import TicketControl from "./TicketControl";
+import KegControl from "./KegControl";
 import Container from "react-bootstrap/Container";
 
 function App(){
@@ -9,7 +8,7 @@ function App(){
     <React.Fragment>
         <Header />
       <Container>
-        <TicketControl />
+        <KegControl />
       </Container>
     </React.Fragment>
   );

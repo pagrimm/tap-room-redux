@@ -21,11 +21,12 @@ class KegControl extends React.Component {
   // const myReturn = myStyle();
 
   handleEditClick = () => {
+    console.log("handleEditClick reached!");
     this.setState({editing: true});
   }
 
   handleChangingSelectedKeg = (id) => {
-    const selectedKeg = this.state.masterKegList.filter(Keg => Keg.id === id)[0];
+    const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
     this.setState({selectedKeg: selectedKeg});
   }
 
@@ -52,17 +53,17 @@ class KegControl extends React.Component {
   }
 
   handleDeletingKeg = (id) => {
-    const newMasterKegList = this.state.masterKegList.filter(Keg => Keg.id !==id);
+    const newMasterKegList = this.state.masterKegList.filter(keg => keg.id !==id);
     this.setState({
       masterKegList: newMasterKegList,
       selectedKeg: null
     });
   }
 
-  handleEditingKegInList = (KegToEdit) => {
+  handleEditingKegInList = (kegToEdit) => {
     const editedMasterKegList = this.state.masterKegList
-      .filter(Keg => Keg.id !== this.state.selectedKeg.id)
-      .concat(KegToEdit);
+      .filter(keg => keg.id !== this.state.selectedKeg.id)
+      .concat(kegToEdit);
     this.setState({
       masterKegList: editedMasterKegList,
       editing: false,
@@ -75,12 +76,12 @@ class KegControl extends React.Component {
     let buttonText = null;
     if (this.state.editing ) {      
       currentlyVisibleState = <EditKegForm
-      Keg = {this.state.selectedKeg}
+      keg = {this.state.selectedKeg}
       onEditKeg = {this.handleEditingKegInList} />
       buttonText = "Return to Keg List";
     } else if (this.state.selectedKeg != null) {
         currentlyVisibleState = <KegDetail 
-          Keg = {this.state.selectedKeg} 
+          keg = {this.state.selectedKeg} 
           onClickingDelete = {this.handleDeletingKeg} 
           onClickingEdit = {this.handleEditClick} />
         buttonText = "Return to Keg List";
@@ -90,7 +91,7 @@ class KegControl extends React.Component {
     } else {
         currentlyVisibleState = 
           <KegList 
-            KegList={this.state.masterKegList} 
+            kegList={this.state.masterKegList} 
             onKegSelection={this.handleChangingSelectedKeg} />
         buttonText = "Add Keg"
     }
@@ -98,7 +99,7 @@ class KegControl extends React.Component {
       <div style={{ 
         textAlign: 'center',
         padding: '20px',
-        }}>
+      }}>
       <React.Fragment>
         {currentlyVisibleState}
         <Button variant="primary" onClick={this.handleClick}>{buttonText}</Button>

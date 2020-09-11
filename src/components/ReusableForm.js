@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ReusableForm(props) {
@@ -13,7 +14,7 @@ function ReusableForm(props) {
           <Form.Control type='text' name='name'/>
         </Form.Group>
         <Form.Group>
-          <Form.Label>Name</Form.Label>
+          <Form.Label>Brand</Form.Label>
           <Form.Control type='text' name='brand'/>
         </Form.Group>
         <Form.Group>
@@ -31,7 +32,7 @@ function ReusableForm(props) {
             <InputGroup.Prepend>
               <InputGroup.Text>%</InputGroup.Text>
             </InputGroup.Prepend>
-          <Form.Control type="number" min="1" max="1" step="1" name="alcohol"/>
+          <Form.Control type="number" min="1" max="100" step="1" name="alcohol"/>
           </InputGroup>
         </Form.Group>
         <div style={{padding: 10}}>
