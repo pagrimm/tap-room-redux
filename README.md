@@ -1,4 +1,4 @@
-# Tap Room
+# Tap Room Redux
 **Weekly Project for Epicodus**  
 **By Peter Grimm, 09.11.2020**
 
