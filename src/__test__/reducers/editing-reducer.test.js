@@ -6,18 +6,18 @@ describe("formVisibleReducer", () => {
     expect(editingReducer(false, { type: null })).toEqual(false);
   });
 
-  test('Should toggle form visibility state', () =>
+  test('Should toggle form editing state', () =>
   {
     expect(editingReducer(false, {type:'EDITING_TOGGLE'})).toEqual(true);
   })
 
-  test('Should set form visibility state to true', () =>
+  test('Should set form editing state to true', () =>
   {
     const currentState = false;
     expect(editingReducer(currentState, {type:'EDITING_TRUE'})).toEqual(true);
   })
 
-  test('Should set form visibility state to false', () =>
+  test('Should set form editing state to false', () =>
   {
     const currentState = true;
     expect(editingReducer(currentState, {type:'EDITING_FALSE'})).toEqual(false);

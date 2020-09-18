@@ -11,4 +11,16 @@ describe("formVisibleReducer", () => {
     expect(formVisibleReducer(false, {type:'TOGGLE_FORM'})).toEqual(true);
   })
 
+  test('Should set form visibility state to true', () =>
+  {
+    const currentState = false;
+    expect(formVisibleReducer(currentState, {type:'FORM_VISIBLE_TRUE'})).toEqual(true);
+  })
+
+  test('Should set form visibility state to false', () =>
+  {
+    const currentState = true;
+    expect(formVisibleReducer(currentState, {type:'FORM_VISIBLE_FALSE'})).toEqual(false);
+  })
+
 });
