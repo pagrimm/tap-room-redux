@@ -61,7 +61,7 @@ describe('kegListReducer', () => {
       type: 'DELETE_KEG',
       id: 1
     };
-    expect(postListReducer(currentState, action)).toEqual({
+    expect(kegListReducer(currentState, action)).toEqual({
       2: {
         name: 'Thunder Ale',
         brand: 'Barleybrew Brewery',
