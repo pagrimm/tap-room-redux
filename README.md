@@ -4,7 +4,7 @@
 
 ## Description
 
-Weekly project for Epicodus. An app that allows a tap room to keep track of their kegs in stock and the amount of pints currently remaining in those kegs. Designed to showcase my skill with React, including functional and class compontents, local and shared state, and props and PropTypes.
+Weekly project for Epicodus. An app that allows a tap room to keep track of their kegs in stock and the amount of pints currently remaining in those kegs. Designed to showcase my skill with React, including functional and class compontents, local and shared state, and props and PropTypes. It has now been refactored to exclusively use Redux for state.
 
 ## Specifications
 * As a user, I want to see a list/menu of all available kegs. For each keg, I want to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
@@ -35,8 +35,10 @@ Weekly project for Epicodus. An app that allows a tap room to keep track of thei
 HTML  
 CSS  
 React 16.13.1  
-React Bootstrap 1.3.0  
+Redux 4.0.5  
+React Redux 7.1.3  
 Bootstrap 4.5.2  
+React Bootstrap 1.3.0
 
 ## Legal
 
