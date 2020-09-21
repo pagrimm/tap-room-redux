@@ -3,7 +3,6 @@ import * as a from './../../actions';
 
 describe("selectedKegReducer", () => {
   const testKeg = {
-    type: 'SELECT_KEG',
     name: 'Barleybrew Scalder',
     brand: 'Barleybrew Brewery',
     price: 10,
@@ -36,9 +35,7 @@ describe("selectedKegReducer", () => {
       pints: 124,
       id: 1,
     }
-    const action = {
-      type: 'DESELECT_KEG',
-    };
+    const action = a.deselectKeg();
     expect(selectedKegReducer(currentState, action)).toEqual(null);
   });
 });

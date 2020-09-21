@@ -1,4 +1,5 @@
 import formVisibleReducer from '../../reducers/form-visible-reducer';
+import * as a from './../../actions';
 
 describe("formVisibleReducer", () => {
   
@@ -8,19 +9,19 @@ describe("formVisibleReducer", () => {
 
   test('Should toggle form visibility state to true', () =>
   {
-    expect(formVisibleReducer(false, {type:'TOGGLE_FORM'})).toEqual(true);
+    expect(formVisibleReducer(false, a.toggleForm())).toEqual(true);
   })
 
   test('Should set form visibility state to true', () =>
   {
     const currentState = false;
-    expect(formVisibleReducer(currentState, {type:'FORM_VISIBLE_TRUE'})).toEqual(true);
+    expect(formVisibleReducer(currentState, a.formVisibleTrue())).toEqual(true);
   })
 
   test('Should set form visibility state to false', () =>
   {
     const currentState = true;
-    expect(formVisibleReducer(currentState, {type:'FORM_VISIBLE_FALSE'})).toEqual(false);
+    expect(formVisibleReducer(currentState, a.formVisibleFalse())).toEqual(false);
   })
 
 });

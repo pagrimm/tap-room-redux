@@ -1,4 +1,5 @@
 import editingReducer from '../../reducers/editing-reducer';
+import * as a from './../../actions';
 
 describe("formVisibleReducer", () => {
   
@@ -8,19 +9,19 @@ describe("formVisibleReducer", () => {
 
   test('Should toggle form editing state', () =>
   {
-    expect(editingReducer(false, {type:'EDITING_TOGGLE'})).toEqual(true);
+    expect(editingReducer(false, a.editingToggle())).toEqual(true);
   })
 
   test('Should set form editing state to true', () =>
   {
     const currentState = false;
-    expect(editingReducer(currentState, {type:'EDITING_TRUE'})).toEqual(true);
+    expect(editingReducer(currentState, a.editingTrue())).toEqual(true);
   })
 
   test('Should set form editing state to false', () =>
   {
     const currentState = true;
-    expect(editingReducer(currentState, {type:'EDITING_FALSE'})).toEqual(false);
+    expect(editingReducer(currentState, a.editingFalse())).toEqual(false);
   })
 
 });

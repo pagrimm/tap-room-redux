@@ -1,10 +1,12 @@
+import * as c from './../actions/ActionTypes';
+
 export default(state = false, action) => {
   switch(action.type) {
-    case 'EDITING_TOGGLE':
+    case c.EDITING_TOGGLE:
       return !state;
-    case 'EDITING_TRUE':
+    case c.EDITING_TRUE:
       return true;
-    case 'EDITING_FALSE':
+    case c.EDITING_FALSE:
       return false;
     default:
       return state;

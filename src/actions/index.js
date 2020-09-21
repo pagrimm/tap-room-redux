@@ -1,7 +1,9 @@
+import * as c from './ActionTypes';
+
 export const addKeg = (keg) => {
   const { name, brand, price, alcohol, pints, id } = keg;
   return {
-    type: 'ADD_KEG',
+    type: c.ADD_KEG,
     name: name,
     brand: brand,
     price: price,
@@ -12,14 +14,14 @@ export const addKeg = (keg) => {
 }
 
 export const deleteKeg = id => ({
-  type: 'DELETE_KEG',
+  type: c.DELETE_KEG,
   id
 });
 
 export const selectKeg = (keg) => {
   const { name, brand, price, alcohol, pints, id } = keg;
   return {
-    type: 'SELECT_KEG',
+    type: c.SELECT_KEG,
     name: name,
     brand: brand,
     price: price,
@@ -30,29 +32,29 @@ export const selectKeg = (keg) => {
 };
 
 export const deselectKeg = () => ({
-  type: 'DESELECT_KEG'
+  type: c.DESELECT_KEG
 });
 
 export const toggleForm = () => ({
-  type: 'TOGGLE_FORM'
+  type: c.TOGGLE_FORM
 });
 
 export const formVisibleTrue = () => ({
-  type: 'FORM_VISIBLE_TRUE'
+  type: c.FORM_VISIBLE_TRUE
 });
 
 export const formVisibleFalse = () => ({
-  type: 'FORM_VISIBLE_FALSE'
+  type: c.FORM_VISIBLE_FALSE
 });
 
 export const editingToggle = () => ({
-  type: 'EDITING_TOGGLE'
+  type: c.EDITING_TOGGLE
 });
 
 export const editingTrue = () => ({
-  type: 'EDITING_TRUE'
+  type: c.EDITING_TRUE
 });
 
 export const editingFalse = () => ({
-  type: 'EDITING_FALSE'
+  type: c.EDITING_FALSE
 });
