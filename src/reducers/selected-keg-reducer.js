@@ -1,4 +1,4 @@
-export default (state = null, action) => {
+export default (state, action) => {
   switch (action.type){
     case 'SELECT_KEG':
       const { name, brand, price, alcohol, pints, id} = action;

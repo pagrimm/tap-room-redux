@@ -16,6 +16,23 @@ export const deleteKeg = id => ({
   id
 });
 
+export const selectKeg = (keg) => {
+  const { name, brand, price, alcohol, pints, id } = keg;
+  return {
+    type: 'SELECT_KEG',
+    name: name,
+    brand: brand,
+    price: price,
+    alcohol: alcohol,
+    pints: pints,
+    id: id
+  }
+};
+
+export const deselectKeg = () => ({
+  type: 'DESELECT_KEG'
+});
+
 export const toggleForm = () => ({
   type: 'TOGGLE_FORM'
 });
@@ -38,21 +55,4 @@ export const editingTrue = () => ({
 
 export const editingFalse = () => ({
   type: 'EDITING_FALSE'
-});
-
-export const selectKeg = (keg) => {
-  const { name, brand, price, alcohol, pints, id } = keg;
-  return {
-    type: 'SELECT_KEG',
-    name: name,
-    brand: brand,
-    price: price,
-    alcohol: alcohol,
-    pints: pints,
-    id: id
-  }
-}
-
-export const deselectKeg = () => ({
-  type: 'DESELECT_KEG'
 });

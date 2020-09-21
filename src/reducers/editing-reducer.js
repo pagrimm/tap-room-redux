@@ -3,9 +3,9 @@ export default(state = false, action) => {
     case 'EDITING_TOGGLE':
       return !state;
     case 'EDITING_TRUE':
-        return true;
+      return true;
     case 'EDITING_FALSE':
-        return false;
+      return false;
     default:
       return state;
   }
